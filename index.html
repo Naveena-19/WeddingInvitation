@@ -26,21 +26,35 @@ body {
   cursor: pointer;
 }
 
-/* 💛 NAMES SECTION */
+/* 💛 NAMES SECTION (FIXED) */
 .names-section {
-  padding: 60px 20px 40px;
-  background: linear-gradient(135deg, #fff0e6, #ffe5ec);
+  padding: 70px 20px 50px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(40, 70, 55, 0.95),
+    rgba(80, 50, 40, 0.95)
+  );
+
+  color: #f5e6c8;
 }
 
 .names-section p {
   margin: 5px;
+  color: #f0e6d2;
 }
 
+/* NAMES */
 .groom, .bride {
   font-family: 'Playfair Display';
-  font-size: 36px;
-  color: #f5d78e;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  font-size: 38px;
+  color: #ffd700;
+  font-weight: 700;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.8),
+    0 0 8px rgba(255,215,0,0.4);
+
   opacity: 0;
 }
 
@@ -54,17 +68,19 @@ body {
 }
 
 .heart {
-  font-size: 28px;
-  margin: 6px 0;
+  font-size: 30px;
+  margin: 8px 0;
   animation: pulse 2s infinite;
 }
 
+/* TELUGU */
 .telugu {
   margin-top: 10px;
   font-size: 15px;
+  color: #f5e6c8;
 }
 
-/* 📸 IMAGE SECTION */
+/* 📸 IMAGE */
 .image-section img {
   width: 100%;
   max-height: 500px;
@@ -209,7 +225,7 @@ button {
     <p>📅 2nd May 2026</p>
     <p>⏰ 10:00 AM</p>
     <p>📍 Chintal, Hyderabad</p>
-    <a href="https://maps.app.goo.gl/yqFPHeuse" class="btn">View Map</a>
+    <a href="https://www.google.com/maps/place/49-230%2F2,+Cherukupalli+Colony,+Quthbullapur,+Hyderabad,+Telangana+500054/@17.4909221,78.4585492,3a,75y,335.63h,119.05t/data=!3m7!1e1!3m5!1sEUkqHwnZUr-xOk2WxY9ThA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-29.048117751467757%26panoid%3DEUkqHwnZUr-xOk2WxY9ThA%26yaw%3D335.6255859559519!7i13312!8i6656!4m15!1m8!3m7!1s0x3bcb906c046519a5:0x610dea23bf3ebee2!2s49-230%2F2,+Cherukupalli+Colony,+Quthbullapur,+Hyderabad,+Telangana+500054!3b1!8m2!3d17.4908856!4d78.4586419!16s%2Fg%2F11lmq73mgk!3m5!1s0x3bcb906c046519a5:0x610dea23bf3ebee2!8m2!3d17.4908856!4d78.4586419!16s%2Fg%2F11lmq73mgk!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" class="btn">View Map</a>
   </div>
 
   <div class="card">
@@ -217,7 +233,7 @@ button {
     <p>📅 3rd May 2026</p>
     <p>⏰ 10:05 AM</p>
     <p>📍 Gudlanarva, Nagarkurnool</p>
-    <a href="https://maps.app.goo.gl/YOUR_SECOND_LINK" class="btn">View Map</a>
+    <a href="https://www.google.com/maps/place/Mallanna+temple+%F0%9F%9A%A9/@16.5424348,78.2375353,17z/data=!3m1!4b1!4m6!3m5!1s0x3bca159d9bc82341:0x9e8d35276ba6f301!8m2!3d16.5424348!4d78.2375353!16s%2Fg%2F11lktmvjpl!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" class="btn">View Map</a>
   </div>
 
 </div>
@@ -226,7 +242,7 @@ button {
 <div class="form-section">
   <h2>💌 Leave Your Wishes</h2>
 
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <form action="https://formspree.io/f/mrernyga" method="POST">
     <textarea name="message" placeholder="Write your wishes..." required></textarea>
     <input type="text" name="signature" placeholder="Your name (optional)">
     <button type="submit">Send 💛</button>
@@ -239,7 +255,6 @@ function toggleMusic(){
   music.muted = !music.muted;
 }
 
-// countdown
 const date = new Date("May 3, 2026 10:05:00").getTime();
 setInterval(()=>{
   let now = new Date().getTime();
