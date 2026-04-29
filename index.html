@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GuruCharan 💛 Manasvi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* 🎶 MUSIC BUTTON */
+.music-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #ffffffcc;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 💛 NAMES SECTION */
+.names-section {
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #fff0e6, #ffe5ec);
+}
+
+.names-section p {
+  margin: 5px;
+}
+
+.groom, .bride {
+  font-family: 'Playfair Display';
+  font-size: 36px;
+  color: #f5d78e;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  opacity: 0;
+}
+
+.groom {
+  animation: fadeUp 1.5s forwards;
+}
+
+.bride {
+  animation: fadeUp 1.5s forwards;
+  animation-delay: 1.2s;
+}
+
+.heart {
+  font-size: 28px;
+  margin: 6px 0;
+  animation: pulse 2s infinite;
+}
+
+.telugu {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* 📸 IMAGE SECTION */
+.image-section img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* ⏳ COUNTDOWN */
+.countdown {
+  padding: 40px 10px;
+  background: linear-gradient(135deg, #fff5cc, #ffe5ec);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.box span {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e76f51;
+}
+
+/* 🎨 EVENTS */
+.section {
+  padding: 30px 15px;
+}
+
+.card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #fff5f2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 20px;
+  color: #e76f51;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #2a9d8f, #52b788);
+  color: white;
+  text-decoration: none;
+}
+
+/* 💌 FORM */
+.form-section {
+  background: linear-gradient(135deg, #ffe5ec, #fff0e6);
+  padding: 40px 15px;
+}
+
+textarea, input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background: #e76f51;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(25px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pulse {
+  0%,100% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎶 MUSIC -->
+<audio id="bg-music" loop autoplay muted>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="music-btn" onclick="toggleMusic()">🎵</div>
+
+<!-- 💛 NAMES -->
+<div class="names-section">
+  <p>Together with our families,</p>
+  <p>we invite you to celebrate our wedding</p>
+
+  <div class="groom">GuruCharan</div>
+  <div class="heart">❤️</div>
+  <div class="bride">Manasvi</div>
+
+  <div class="telugu">శుభ వివాహ ఆహ్వానం</div>
+</div>
+
+<!-- 📸 IMAGE -->
+<div class="image-section">
+  <img src="Couple_pic_1.jpeg">
+</div>
+
+<!-- ⏳ COUNTDOWN -->
+<div class="countdown">
+  <h2>💛 Going to be Forever in…</h2>
+
+  <div class="timer">
+    <div class="box"><span id="days"></span>Days</div>
+    <div class="box"><span id="hours"></span>Hours</div>
+    <div class="box"><span id="minutes"></span>Minutes</div>
+    <div class="box"><span id="seconds"></span>Seconds</div>
+  </div>
+</div>
+
+<!-- 🎨 EVENTS -->
+<div class="section">
+
+  <div class="card">
+    <div class="title">🌸 Pradhanam & Haldi</div>
+    <p>📅 2nd May 2026</p>
+    <p>⏰ 10:00 AM</p>
+    <p>📍 Chintal, Hyderabad</p>
+    <a href="https://maps.app.goo.gl/yqFPHeuse" class="btn">View Map</a>
+  </div>
+
+  <div class="card">
+    <div class="title">💍 Wedding Muhurtham</div>
+    <p>📅 3rd May 2026</p>
+    <p>⏰ 10:05 AM</p>
+    <p>📍 Gudlanarva, Nagarkurnool</p>
+    <a href="https://maps.app.goo.gl/YOUR_SECOND_LINK" class="btn">View Map</a>
+  </div>
+
+</div>
+
+<!-- 💌 WISHES -->
+<div class="form-section">
+  <h2>💌 Leave Your Wishes</h2>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <textarea name="message" placeholder="Write your wishes..." required></textarea>
+    <input type="text" name="signature" placeholder="Your name (optional)">
+    <button type="submit">Send 💛</button>
+  </form>
+</div>
+
+<script>
+const music = document.getElementById("bg-music");
+function toggleMusic(){
+  music.muted = !music.muted;
+}
+
+// countdown
+const date = new Date("May 3, 2026 10:05:00").getTime();
+setInterval(()=>{
+  let now = new Date().getTime();
+  let gap = date - now;
+
+  document.getElementById("days").innerText = Math.floor(gap/(1000*60*60*24));
+  document.getElementById("hours").innerText = Math.floor((gap/(1000*60*60))%24);
+  document.getElementById("minutes").innerText = Math.floor((gap/(1000*60))%60);
+  document.getElementById("seconds").innerText = Math.floor((gap/1000)%60);
+},1000);
+</script>
+
+</body>
+</html>
